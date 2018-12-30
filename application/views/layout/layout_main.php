@@ -4,6 +4,7 @@
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
         <title><?php echo $title ?></title>
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/image/favicon.ico'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/other/zen-other.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/css/bootstrap-lumen.min.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fontawesome/css/font-awesome.min.css'); ?>">
