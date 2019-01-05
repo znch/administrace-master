@@ -56,6 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
+$route['strouhanka'] = 'DefaultView/strouhanka';
+$route['tabulka'] = 'DefaultView/tabulka';
 $route['login'] = 'Login/login';
 $route['login-finish'] = 'Login/loginFinish';
 $route['register1'] = 'Login/register1';
@@ -65,11 +67,16 @@ $route['register-finish2'] = 'Login/registerFinish2';
 $route['register3'] = 'Login/register3';
 $route['register-finish3'] = 'Login/registerFinish3';
 
+$route['tabulka/users_groups'] = "admin/user/users_groups/index"; // Needed
+$route['tabulka/users_groups/(:any)/(:any)'] = "admin/user/users_groups/index/$1$2"; // Need the $1$2
+
 $route['admin/dashboard'] = 'Dashboard/dashboard';
 $route['admin/logout'] = 'Dashboard/logout';
 $route['admin/users'] = 'Users/index';
 $route['admin/users/add-user'] = 'Users/addUser';
 $route['admin/users/add-user-final'] = 'Users/addUserFinal';
 $route['admin/users/delete-user/(:num)'] = 'Users/deleteUser/$1';
+$route['admin/users/edit-user/(:num)'] = 'Users/editUser/$1';
+$route['admin/users/edit-user-final/(:num)'] = 'Users/editUserFinal/$1';
 $route['admin/categories'] = 'Categories/index';
 $route['admin/articles'] = 'Articles/index';

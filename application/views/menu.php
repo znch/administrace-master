@@ -4,6 +4,8 @@
             <a class="navbar-brand" href="<?php echo base_url() ?>">Registrace a přihlášení</a>
         </div>
         <ul class="nav navbar-nav">
+          <li><?php echo anchor('tabulka', '<span class="fa fa-table"></span> Tabulka'); ?></li>
+          <li><?php echo anchor('strouhanka', '<span class="fa fa-folder-open"></span> Strouhanka'); ?></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
       <li><?php echo anchor('register3', '<span class="fa fa-user"></span> Registrovat'); ?></li>

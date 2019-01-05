@@ -17,6 +17,30 @@ class Admin_model extends CI_Model{
     function __construct() {
         parent::__construct();
     }
+    
+    public function getUserGroups($data = array()) {
+        $data['order'] = ($data['order'] == 'desc') ? 'desc' : 'asc';
+        $sort_columns = array('user_group_id', 'name');
+        $data['sort'] = (in_array($data['sort'], $sort_columns)) ? $data['sort'] : 'name';
+
+        $this->db->select('user_group_id, name');
+        $this->db->from($this->db->dbprefix . 'user_group');
+        $this->db->limit($data['limit'], $data['offset'] == 1 ? 0 : $data['offset']);
+        $this->db->order_by($data['sort'], $data['order']);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        } else {
+            return false;
+        }
+    }
+
+    public function getTotalUserGroups() {
+        $query = $this->db->query("SELECT COUNT(*) AS total FROM " . $this->db->dbprefix . "user_group");
+
+        return $query->row('total');
+    }
 
 
     public function getVsechnyUzivatele()

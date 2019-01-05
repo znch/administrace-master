@@ -3,6 +3,10 @@
     <head>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
         <title><?php echo $title ?></title>
+
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/datatables/datatables.min.css'); ?>"/>
+        <script type="text/javascript" src="<?php echo base_url('assets/datatables/datatables.min.js'); ?>"></script>
+
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/image/favicon.ico'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/other/zen-other.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrapold/css/bootstrap.min.css'); ?>">

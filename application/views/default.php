@@ -10,7 +10,7 @@
 <br>
 
 <p class="ba-ma-left">
-Pro přesměrování na registrační nebo přihlašovací formulář použijte buď níže uvedená tlačítka nebo tlačítka v navigačním pruhu
+Pro navigaci na těchto stránkách použijte buď níže uvedená tlačítka nebo tlačítka v navigačním pruhu
 </p>
 
 <br>
@@ -38,5 +38,29 @@ Pro přesměrování na registrační nebo přihlašovací formulář použijte 
       <a href="<?php echo base_url('login') ?>" class="btn btn-info" role="button">Přihlášení</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toto tlačítko Vás přesměruje na přihlašovací formulář.
     </li>
   </ul>
+
+</div>
+<br>
+<br>
+<br>
+<div class="ba-ma-left">
+
+<ul class="nobullets">
+  <li>
+    <a href="<?php echo base_url('tabulka')?>" class="btn btn-info" role="button">Tabulka</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toto tlačítko Vás přesměruje na tabulku s daty a řazením.
+  </li>
+</ul>
+
+</div>
+<br>
+<br>
+<br>
+<div class="ba-ma-left">
+
+<ul class="nobullets">
+  <li>
+    <a href="<?php echo base_url('strouhanka')?>" class="btn btn-info" role="button">Strouhanka</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toto tlačítko Vás přesměruje na strouhanku.
+  </li>
+</ul>
 
 </div>

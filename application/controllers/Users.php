@@ -44,7 +44,6 @@ class Users extends Admin_controller{
 
     function addUserFinal()
     {
-
         $username = $this->input->post('username');
         $email = $this->input->post('email');
         $password = $this->input->post('password');
@@ -52,17 +51,14 @@ class Users extends Admin_controller{
 
         $return = $this->Admin_model->setUser($id, $username, $email, $password);
         redirect('admin/users');
-
-
-
     }
 
     function deleteUser($id)
     {
         $this->Admin_model->setDeleteUser($id);
         redirect('admin/users');
-
-
     }
+
+    
 
 }

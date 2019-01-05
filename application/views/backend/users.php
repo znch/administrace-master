@@ -29,7 +29,7 @@
 
 
 $hlavicka = array(
-    'username', 'email', 'id'
+    'Uživatelské jméno', 'E-mail', 'ID'
 );
 
 $this->table->set_heading($hlavicka);
@@ -46,14 +46,26 @@ foreach($users as $row)
 
 
           );
+
+        $editButton = array(
+              'type' => 'submit',
+              'name' => 'edit',
+              'content' => '<span class="glyphicon glyphicon-pencil"></span>',
+              'class' => 'btn btn-info'
+
+          );
+
+
         $delete = form_open('admin/users/delete-user/'.$row->id).form_button($dataButton).form_close();
+        $edit = form_open('admin/users/edit-user/'.$row->id).form_button($editButton).form_close();
 
         $data = array(
 
         $row->username,
         $row->email,
         $row->id,
-        $delete
+        $delete,
+        $edit
 
     );
     $this->table->add_row($data);
@@ -63,7 +75,7 @@ foreach($users as $row)
 
 
 $template = array(
-        'table_open'            => '<table class="table table-bordered">',
+        'table_open'            => '<table class="table table-striped">',
 
         'thead_open'            => '<thead>',
         'thead_close'           => '</thead>',
