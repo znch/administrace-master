@@ -1,30 +1,64 @@
 <div class="container">
 <h1>Administrace uživatelů</h1>
+<br>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo base_url('admin/dashboard')?>">Administrace</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Uživatelé</li>
+  </ol>
+</nav>
+
+
+<br>
+
+
+<div class="ta-center">
+
+<ul class="nobullets">
+  <li>
+    <a href="<?php echo base_url('admin/users/add-user')?>" class="btn btn-info" role="button">Vytvořit uživatele</a>
+  </li>
+</ul>
+
+</div>
+<br>
+<br>
+
 <?php
 
 
 
 $hlavicka = array(
-    'S_ID', 'PLACE', 'LATITUDE', 'LONGTITUDE'
+    'username', 'email', 'id'
 );
 
 $this->table->set_heading($hlavicka);
 
 
-foreach($stanice as $row)
+foreach($users as $row)
 {
-        
+
+        $dataButton = array(
+              'type' => 'submit',
+              'name' => 'delete',
+              'content' => '<span class="glyphicon glyphicon-trash"></span>',
+              'class' => 'btn btn-danger'
+
+
+          );
+        $delete = form_open('admin/users/delete-user/'.$row->id).form_button($dataButton).form_close();
+
         $data = array(
-            
+
         $row->username,
         $row->email,
-        $row->id
-        
-        
+        $row->id,
+        $delete
+
     );
     $this->table->add_row($data);
-    
-    
+
+
 }
 
 
