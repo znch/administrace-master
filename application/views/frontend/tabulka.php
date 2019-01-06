@@ -10,20 +10,22 @@
 </nav>
 
 
-<table id="users">
+<table id="book-table" class="table table-bordered table-striped">
 <thead>
-<tr><td>Uživatelské jméno</td><td>E-mail</td><td>ID</td></tr>
+<tr><td>Název knihy</td><td>Cena knihy (£)</td><td>Autor</td><td>Hodnocení</td><td>Nakladatelství</td></tr>
 </thead>
 <tbody>
 </tbody>
 </table>
 
 
-</div>
-</html>
-
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#users').DataTable();
+    $('#book-table').DataTable({
+        "ajax": {
+            url : "<?php echo site_url("DefaultView/books_page") ?>",
+            type : 'GET'
+        },
+    });
 });
 </script>

@@ -92,4 +92,9 @@ class Admin_model extends CI_Model{
 
     }
 
+    public function get_books()
+    {
+         return $this->db->get("books");
+    }
+
 }
