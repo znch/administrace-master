@@ -67,8 +67,6 @@ $route['register-finish2'] = 'Login/registerFinish2';
 $route['register3'] = 'Login/register3';
 $route['register-finish3'] = 'Login/registerFinish3';
 
-$route['tabulka/users_groups'] = "admin/user/users_groups/index"; // Needed
-$route['tabulka/users_groups/(:any)/(:any)'] = "admin/user/users_groups/index/$1$2"; // Need the $1$2
 
 $route['admin/dashboard'] = 'Dashboard/dashboard';
 $route['admin/logout'] = 'Dashboard/logout';

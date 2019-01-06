@@ -91,7 +91,7 @@ $template = array(
         'row_start'             => '<tr>',
         'row_end'               => '</tr>',
         'cell_start'            => '<td>',
-        'cell_end'              => '</td>',
+        'cell_end'              => '</td>', 
 
         'row_alt_start'         => '<tr>',
         'row_alt_end'           => '</tr>',

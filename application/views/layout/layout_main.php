@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrapold/css/bootstrap.min.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrapold/css/bootstrap-lumen.min.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fontawesome/css/font-awesome.min.css'); ?>">
-        <script src="<?php echo base_url('assets/jquery/jqury-3.2.1.min.js'); ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url('assets/jquery/jquery-3.2.1.min.js'); ?>" type="text/javascript"></script>
         <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
     </head>
     <body>

@@ -59,6 +59,31 @@ class Users extends Admin_controller{
         redirect('admin/users');
     }
 
-    
+    function editUser($id)
+    {
+        $data['user'] = $this->Admin_model->getEditUser($id);
+        $data['id'] = $id;
+
+        $data['title'] = "Upravení uživatele";
+        $data['main'] = "backend/editUser";
+        $this->layout->generate($data);
+
+
+
+    }
+
+    function editUserFinal($id)
+    {
+      $id = $this->input->post('id');
+      $username = $this->input->post('username');
+      $email = $this->input->post('email');
+
+      $return = $this->Admin_model->setEditUser($id, $username, $email);
+      redirect('admin/users');
+
+
+    }
+
+
 
 }
