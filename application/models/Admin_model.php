@@ -24,7 +24,7 @@ class Admin_model extends CI_Model{
         $this->db->where('zobrazit = 1');
         $this->db->or_where('zobrazit = ');
         $this->db->from('users');
-        $this->db->order_by('username', 'asc');
+        $this->db->order_by('id', 'asc');
 
         $result = $this->db->get()->result();
         return $result;
@@ -82,7 +82,7 @@ class Admin_model extends CI_Model{
     public function setEditUser($id, $username, $email)
     {
       $data = array(
-
+        'id' => $id,
         'username' => $username,
         'email' => $email
 

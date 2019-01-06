@@ -74,7 +74,7 @@ class Users extends Admin_controller{
 
     function editUserFinal($id)
     {
-      $id = $this->input->post('id');
+      //$id = $this->input->post('id');
       $username = $this->input->post('username');
       $email = $this->input->post('email');
 
