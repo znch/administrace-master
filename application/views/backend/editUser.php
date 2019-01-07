@@ -16,34 +16,30 @@
 
 
 <?php
-
-
 $attributes = array(
     'class' => 'form-horizontal'
 );
-
-
 echo form_open('admin/users/edit-user-final/'.$id, $attributes);
 ?>
 
 <div class="form-group">
     <label class="control-label col-sm-2" for="id">ID:</label>
     <div class="col-sm-5">
-      <input name="username" type="text" class="form-control" id="id"   value="<?php echo $user -> id ?>" disabled>
+      <input name="id" type="text" class="form-control" id="id"   value="<?php echo $user -> id ?>" disabled>
     </div>
   </div>
 
 <div class="form-group">
-    <label class="control-label col-sm-2" for="username">Uživatlské jméno:</label>
+    <label class="control-label col-sm-2" for="username">Uživatelské jméno:</label>
     <div class="col-sm-5">
-      <input name="username" type="text" class="form-control" id="username" value="<?php echo $username -> username ?>">
+      <input name="username" type="text" class="form-control" id="username" value="<?php echo $user -> username ?>">
     </div>
   </div>
 
 <div class="form-group">
     <label class="control-label col-sm-2" for="email">E-mail:</label>
     <div class="col-sm-5">
-      <input name="email" type="text" class="form-control" id="email" value="<?php echo $email -> email ?>">
+      <input name="email" type="text" class="form-control" id="email" value="<?php echo $user -> email ?>">
     </div>
   </div>
 
@@ -55,8 +51,6 @@ echo form_open('admin/users/edit-user-final/'.$id, $attributes);
 </div>
 
 <?php
-
-
 echo form_close();
 ?>
 </div>
