@@ -77,6 +77,7 @@ class Admin_model extends CI_Model{
 
 
     }
+	
 
 
     public function setEditUser($id, $username, $email)
