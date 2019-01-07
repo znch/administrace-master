@@ -12,7 +12,7 @@ class DefaultView extends CI_Controller
     }
 
 
-    function default() {
+    function defaultPage() {
         $data["title"] = "Úvodní stránka";
         $data["main"] = "default";
         $this->layout->generate($data);
