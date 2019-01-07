@@ -62,6 +62,8 @@ class Users extends Admin_controller{
     function editUser($id)
     {
         $data['user'] = $this->Admin_model->getEditUser($id);
+		$data['username'] = $this->Admin_model->getEditUser($username);
+		$data['email'] = $this->Admin_model->getEditUser($email);
         $data['id'] = $id;
 
         $data['title'] = "Upravení uživatele";
